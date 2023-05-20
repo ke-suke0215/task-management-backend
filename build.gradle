@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '2.7.11'
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'checkstyle' // Checkstyleプラグインを追加
 }
 
 group = 'com.example'
@@ -17,6 +18,16 @@ dependencies {
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.postgresql:postgresql:42.3.3'
+}
+
+checkstyle { // Checkstyleの設定
+    toolVersion = '8.42'
+    configFile = file('./config/checkstyle/checkstyle.xml') // ここに設定ファイルのパスを書く
+    sourceSets = [sourceSets.main]
+}
+
+tasks.named('check') { // 全てのチェックを行うタスク
+    dependsOn 'checkstyleMain'
 }
 
 tasks.named('test') {
