@@ -26,10 +26,6 @@ checkstyle { // Checkstyleの設定
     sourceSets = [sourceSets.main]
 }
 
-tasks.named('check') { // 全てのチェックを行うタスク
-    dependsOn 'checkstyleMain'
-}
-
 tasks.named('test') {
     useJUnitPlatform()
 }
