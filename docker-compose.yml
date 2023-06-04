@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  task-management:
+  springboot:
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,7 +13,6 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/postgres
 
   postgres:
-    container_name: task-management
     build: ./docker/postgres
     restart: always
     ports: 
