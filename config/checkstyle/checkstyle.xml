@@ -269,10 +269,10 @@
     <module name="OverloadMethodsDeclarationOrder"/>
     <module name="VariableDeclarationUsageDistance"/>
     <module name="CustomImportOrder">
-      <property name="sortImportsInGroupAlphabetically" value="true"/>
+      <!-- <property name="sortImportsInGroupAlphabetically" value="false"/>
       <property name="separateLineBetweenGroups" value="true"/>
       <property name="customImportOrderRules" value="STATIC###THIRD_PARTY_PACKAGE"/>
-      <property name="tokens" value="IMPORT, STATIC_IMPORT, PACKAGE_DEF"/>
+      <property name="tokens" value="IMPORT, STATIC_IMPORT, PACKAGE_DEF"/> -->
     </module>
     <module name="MethodParamPad">
       <property name="tokens"
@@ -319,7 +319,6 @@
                value="^@return the *|^This method returns |^A [{]@code [a-zA-Z0-9]+[}]( is a )"/>
     </module>
     <module name="JavadocParagraph"/>
-    <module name="RequireEmptyLineBeforeBlockTagGroup"/>
     <module name="AtclauseOrder">
       <property name="tagOrder" value="@param, @return, @throws, @deprecated"/>
       <property name="target"
