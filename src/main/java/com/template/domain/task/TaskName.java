@@ -15,10 +15,10 @@ public class TaskName {
 	}
 
 	/**
-	 * idを生成する.
+	 * タスク名を生成する.
 	 * 
-	 * @param id id
-	 * @return 生成されたid
+	 * @param name タスク名
+	 * @return 生成されたタスク名
 	 */
 	static TaskName of(String name) {
 		TaskName taskName = new TaskName(name);

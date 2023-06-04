@@ -3,13 +3,13 @@ package com.template.domain.common;
 /**
  * idを表す.
  */
-public class Id {
+public class GeneralId {
 	private long id;
 
 	/**
 	 * コンストラクタ.
 	 */
-	private Id(long id) {
+	private GeneralId(long id) {
 		this.id = id;
 	}
 
@@ -19,7 +19,7 @@ public class Id {
 	 * @param id id
 	 * @return 生成されたid
 	 */
-	Id of(long id) {
-		return new Id(id);
+	GeneralId of(long id) {
+		return new GeneralId(id);
 	}
 }
