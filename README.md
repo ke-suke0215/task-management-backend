@@ -16,13 +16,19 @@ cd docker/postgres/   # PostgreSQL用のDockerfileがあるディレクトリに
 docker-compose up -d  # コンテナを起動
 ```
 
-コンテナを停止
+その他コンテナ操作
+```sh
+docker-compose stop   # コンテナ停止
+docker-compose down   # コンテナ削除
 ```
-docker-compose stop
+## DBへの接続
+
+dockerのインスタンスへ接続
+```sh
+docker exec -it task-management bash
 ```
 
-コンテナを削除
+DBへ接続
+```sh
+psql -U postgres -d task_management
 ```
-docker-compose down
-```
-
